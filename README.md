@@ -13,6 +13,9 @@ Et Norge digitalt prosjekt som utarbeider en teknisk WFS-veileder med eksempler,
 
 WFS-klienten er ment som et supplement til veilederen. Applikasjonen har en enkel MVC-basert kode som er gjenbrukbar for andre kontekster. Kjøring av forhåndsdefinerte spørringer, redigering samt opplasting m/validering av egendefinerte spørringer. Forklaringer og figurer tenkes gjenbrukt fra veilederen i egne faner. BAAT-autorisering er transparent ved bruk av klienten så lenge domenet er klarert for bruk i applikasjonen.
 
+## Demo
+Klienten kan testes ut live [her](http://geo.ngu.no/kart/wfsklient/)
+
 # Disclaimer
 Kildekoden er å anse som "as-is". 
 NGU fraskriver seg ethvert ansvar for informasjonens/kildekodens kvalitet og hva informasjonen/kildekoden brukes til

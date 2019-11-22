@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wfs:GetFeature
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd" 
+	xmlns:wfs="http://www.opengis.net/wfs/2.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:fes="http://www.opengis.net/fes/2.0" 
+	xmlns:gsmlb="http://xmlns.geosciml.org/GeoSciML-Basic/4.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	service="WFS" 
+	version="2.0.0"
+	count="100"
+> 
+	<!-- Join does not work -->
+	<wfs:Query typeNames="gsmlb:GeologicUnit gsmlb:MappedFeature" srsName="urn:ogc:def:crs:EPSG::4258">
+		<fes:Filter>
+			<fes:PropertyIsEqualTo>
+				<fes:ValueReference>
+					gsmlb:MappedFeature/gsmlb:specification/gsmlb:GeologicUnit@gml:id
+				</fes:ValueReference>
+				<fes:ValueReference>
+					gsmlb:GeologicUnit@gml:id
+				</fes:ValueReference>
+			</fes:PropertyIsEqualTo>
+		</fes:Filter> 	
+	</wfs:Query>
+</wfs:GetFeature>

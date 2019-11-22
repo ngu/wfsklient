@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+<script>
+
+function showXML(){
+  var iframe = document.getElementById("upload_target"), xmlObject, xmlString;
+alert(8);
+  if(window.ActiveXObject) {
+	//-- Internet Explorer
+	xmlObject = iframe.contentWindow.document.XMLDocument;
+	xmlString = xmlObject.xml;
+  } else {
+	//-- FireFox
+	xmlObject = iframe.contentDocument.documentElement;
+	xmlString = ( new XMLSerializer() ).serializeToString( xmlObject );
+  }
+  alert(xmlString);
+  var divResult= document.getElementById("result");
+  divResult.value=xmlString;
+}
+
+//helpers
+h={
+showObj: function(o){
+//object to string including methods
+  var s="";
+  //for (i in o.document.parentWindow.frameElement) s+=i+":"+o.document.parentWindow.frameElement[i]+"  "; alert(s);
+  for (i in o) s+=i+":"+o[i]+"\n\n";
+  this.showWin(s);
+},
+
+//displaying string in a new window
+showWin: function(s){
+  var pattern=new RegExp('^<html>','i');
+  if(!pattern.test(s)){
+    s=s.replace(new RegExp("[<]","g"),'&lt');s=s.replace(new RegExp("[>]","g"),'&gt');
+    s='<html><body><pre>'+s+'</pre></html></body>';
+  }
+  var W = window.open("",'','Width=600,Height=480,resizable=yes,scrollbars=yes,left=0,top=0',true);
+  W.focus();W.document.open();W.document.write(s);W.document.close();
+}
+}
+</script>
+</head>
+<body onload="document.getElementById('upload_target').onload=showXML;">
+<form name="frmFileUpload" method="post" enctype="multipart/form-data" action="xmlUpload.php" target="upload_target">
+  XML-fil:
+  <input type="file" id="xmlFile" name="xmlFile" accept="text/xml" size="20"/>
+  <input type="submit" name="btnSubmit" value="OK" />
+</form>
+<iframe id="upload_target" name="upload_target" src="about:blank" style="width:0;height:0;border:0px solid #fff;" onload="showXML()"></iframe>
+<textarea id="result" cols="100" rows="20"></textarea>
+</body>
+</html>

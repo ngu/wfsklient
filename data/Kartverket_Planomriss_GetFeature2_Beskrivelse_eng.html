@@ -1,0 +1,19 @@
+<!-- Innholdsmal for beskrivelser -->
+<div id="html_test" style="right:0px;margin:5px">
+  <img id="html_1" src="data/planomriss.jpg" align="right" border=1 hspace="0" vspace="0" width="270"/>
+  <span id="html_2">
+    <strong>Get all Plan outlines on Zoning for a given municipality, which came into effect after a given date and sort it on that date.
+    </strong>
+    <br/><br/>
+    GetFeature-operation - get objects of type "RpOmråde" (Zoning):
+    <ul>
+      <li>Object types (<i>typeNames</i>): app:RpOmråde</li>
+      <li>Attribute Projection (<i>PropertyName</i>): none</li>
+      <li>Selection (<i>Filter</i>): Objects with a given mulicipality ID and effective date after the given date specified by fes:And, fes:PropertyIsEqualTo and fes:PropertyIsGreaterThanOrEqualTo</li>
+      <li>Sorting (<i>SortBy</i>): Sort by "app:ikrafttredelsesdato" (effective date)</li>
+    </ul>
+    <small>      
+The Plan outlines represents geographic data with associated properties and will include a number of areas with different considerations and often several vertical levels. <a href="http://www.kartverket.no/en/" target="_blank">http://www.kartverket.no/en/</a>
+    </small>  
+  </span>
+</div>

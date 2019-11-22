@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function check() {
+  var ext = document.getElementById("xmlFile").value;
+  ext = ext.substring(ext.length-3,ext.length);
+  ext = ext.toLowerCase();
+  if(ext != 'xml') {
+    alert('Du valgte en .'+ext+
+          ' fil. Kun .xml filer kan velges!');
+	document.getElementById("xmlFile").value="";//null;
+    return false; }
+  else
+    return true; }
+</script>
+</head>
+
+<body>
+<form onsubmit="return check();" name="frmFileUpload" method="post" enctype="multipart/form-data" action="fileUpload.php">
+File: <input type="file" id="xmlFile" name="xmlFile" accept="text/xml"/><!-- accept="text/xml" --><br />
+<input type="submit" name="btnSubmit" value="Submit" />
+</form>
+</body>
+</html>

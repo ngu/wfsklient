@@ -1,0 +1,88 @@
+.form {
+	margin: 0px;
+}
+
+.tableMain {
+	font-family: Arial, Helvetica, Verdana, Sans-serif;
+	border-width:0px;
+	border-color:#000;
+	background-color:#DEE8DC;
+	border-spacing:5px;
+	width:970px;
+}
+
+.title1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size:200%;
+	font-weight: bold;
+	font-stretch:expanded;
+	border:medium;
+	margin:15px;
+}
+
+.title2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size:100%;
+	font-weight: bold;
+    margin:0px;
+}
+
+.textArea {
+	width:959px;
+	height:248px;
+	background-color:#FFF;	
+}
+
+.textArea2 {
+	width:959px;
+	height:348px;
+	background-color:#FFF;
+}
+
+.input {
+	width:750px;
+}
+
+.divTitle {
+	position:absolute;
+}
+
+.divRequest {
+	/*width:960px;
+	height:250px;*/
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+.divDescription {
+	width:960px;
+	height:250px;
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+    border: 1px;
+}
+
+.divResult {
+	/*width:960px;
+	height:350px;*/
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+.divOn {
+	display:block;
+}
+
+.divInline {
+	display:inline;
+}
+
+.divOff {
+	display:none;
+}

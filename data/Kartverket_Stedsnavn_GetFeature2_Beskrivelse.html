@@ -1,0 +1,20 @@
+<!-- Content template for description -->
+<div id="html_test" style="right:0px;margin:5px">
+  <img id="html_1" src="data/stedsnavn.jpg" align="right" border=1 hspace="0" vspace="0" width="270"/>
+  <span id="html_2">
+    <strong>Spør etter alle stedsnavn innenfor en gitt kommune hvor forslagene i stavemåten er avslått. Sorteres etter oppdateringsdato.</strong>
+    <br/><br/>
+    GetFeature-operasjon - henter objekter av typen "Sted":
+    <ul>
+      <!-- <li>Hent xlink referanser (<i>resolveDepth</i>): Ett nivå ned -->
+      <li>Objektyper (<i>typeNames</i>): app:Sted</li>
+      <li>Egenskapsprojeksjon (<i>PropertyName</i>): app:kommune og app:oppdateringsdato</li>
+      <li>Utvalg (<i>Filter</i>): Objekter med en gitt kommune og med skrivemåtestatus "avslått" angitt ved fes:And og fes:PropertyIsEqualTo.</li>
+      <li>Sortering (<i>SortBy</i>): Sortere etter "app:oppdateringsdato" i synkende rekkefølge</li>
+    </ul>
+    <small>
+Gratis stedsnavndata, til bruk for nettjenester, tabeller, lister eller til videre bearbeiding for bruk i forskjellige kartprodukter på land og sjø. Stedsnavndataene hentes fra Sentralt stedsnavnregister (SSR). Stedsnavnene gir bl.a. informasjon om variasjoner i skrivemåte, språk, geografisk posisjon, objekttype, lovmessig status for stedsnavnet (offisielt/uoffisielt) og administrativ tilhørighet.
+<a href="http://www.kartverket.no" target="_blank">http://www.kartverket.no</a>
+    </small>
+  </span>
+</div>

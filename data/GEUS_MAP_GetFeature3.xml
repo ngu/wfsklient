@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wfs:GetFeature
+	xmlns:wfs="http://www.opengis.net/wfs"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"
+	service="WFS"
+	version="1.1.0"
+	maxFeatures="100"
+>
+	<wfs:Query typeName="ms:jupiter_anlaeg_ws" srsName="EPSG:4258">
+		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+			<fes:And>
+				<ogc:BBOX>
+					<ogc:PropertyName>Geometry</ogc:PropertyName>
+					<gml:Envelope xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4258">
+						<gml:lowerCorner>55.60 12.10</gml:lowerCorner>
+						<gml:upperCorner>55.83 12.59</gml:upperCorner>
+					</gml:Envelope>
+				</ogc:BBOX>
+				<fes:PropertyIsEqualTo>
+					<fes:ValueReference>ms:kommunenavn</fes:ValueReference>
+					<fes:Literal>Furesø</fes:Literal>
+				</fes:PropertyIsEqualTo>
+			</fes:And>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>

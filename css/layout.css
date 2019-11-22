@@ -1,0 +1,126 @@
+.form {
+	margin: 0px;
+}
+
+.tableMain0 {
+	font-family: Arial, Helvetica, Verdana, Sans-serif;
+	border-width:0px;
+	border-color:#000;
+	background-color:#DEE8DC;
+	border-spacing:0px;
+	margin:0px;
+	width:970px;
+}
+
+.tableMain {
+	border-spacing:5px;
+	width:965px;
+}
+
+.title1 {
+	font-family: Arial, "Times New Roman", Times, serif;
+	font-size:270%;
+	font-weight: bold;
+	font-stretch:expanded;
+	border:medium;
+	margin:15px;
+	letter-spacing:5px;
+	color:#05722E;
+}
+
+.title2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size:100%;
+	font-weight: bold;
+    margin:0px;
+}
+
+.textArea {
+	width:949px;
+	height:248px;
+	background-color:#FFF;
+	margin:0px;
+}
+
+.textArea2 {
+	width:949px;
+	height:348px;
+	background-color:#FFF;
+	margin:0px;
+}
+
+.htmlResult {
+	width:955px;
+	height:358px;
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+.canvasResult {
+	position:relative;
+	width:955px;
+	height:358px;
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+}
+
+.input {
+	width:750px;
+}
+
+.divTitle {
+	position:absolute;
+}
+
+.divRequest {
+	/*width:960px;
+	height:250px;*/
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+.download {
+	margin:2px;
+	top: 5px;
+	right: 25px;
+	position:absolute;
+	background-color:white;
+	display:inline;
+}
+
+.divDescription {
+	width:955px;
+	height:258px;
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+.divResult {
+	/*width:960px;
+	height:350px;*/
+	position:relative;
+	background-color:#FFF;
+	margin:0px;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+.divOff {
+	display:none;
+}
+
+.divOn {
+	display:block;
+}
+
+.divInline {
+	display:inline;
+}
+

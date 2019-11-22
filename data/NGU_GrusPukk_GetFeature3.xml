@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wfs:GetFeature
+	xmlns:wfs="http://www.opengis.net/wfs"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd"
+	service="WFS"
+	version="1.1.0"
+	maxFeatures="10"
+>
+	<wfs:Query typeName="ms:Grus_Pukk_omrade_verdivurdering" srsName="EPSG:32633">
+		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+			<ogc:BBOX>
+				<ogc:PropertyName>Geometry</ogc:PropertyName>
+				<gml:Envelope xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:32633">
+					<gml:lowerCorner>248303.438135821 6633781.84195402</gml:lowerCorner>
+					<gml:upperCorner>257068.620772227 6642572.28448275</gml:upperCorner>
+				</gml:Envelope>
+			</ogc:BBOX>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>

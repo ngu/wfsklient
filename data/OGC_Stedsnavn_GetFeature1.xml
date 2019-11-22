@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wfs:GetFeature xmlns:wfs="http://www.opengis.net/wfs" maxFeatures="500" service="WFS" version="1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd" xmlns:ms="http://mapserver.gis.umn.edu/mapserver">
+	<!-- http://openpois.net/openpoiwfs -->
+	<wfs:Query typeName="ms:minipoi" srsName="EPSG:4326">
+		<ogc:Filter xmlns:ogc="http://www.opengis.net/ogc">
+			<ogc:BBOX>
+				<ogc:PropertyName>location</ogc:PropertyName>
+				<gml:Envelope xmlns:gml="http://www.opengis.net/gml" srsName="EPSG:4326">
+					<!-- Bognes -->
+					<gml:lowerCorner>16 68</gml:lowerCorner>
+					<gml:upperCorner>16.25 68.25</gml:upperCorner>
+				</gml:Envelope>
+			</ogc:BBOX>
+		</ogc:Filter>
+	</wfs:Query>
+</wfs:GetFeature>

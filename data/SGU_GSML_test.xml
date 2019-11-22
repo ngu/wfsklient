@@ -1,0 +1,94 @@
+URL: http://resource.sgu.se/service/bedrock1m_gsml_gu/wfs
+
+<?xml version="1.0" encoding="UTF-8"?>
+<GetCapabilities
+	xmlns="http://www.opengis.net/wfs/2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd"
+	service="WFS"
+	version="2.0.0"
+/>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<DescribeFeatureType
+	xmlns="http://www.opengis.net/wfs/2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd"
+	service="WFS"
+	version="2.0.0">
+</DescribeFeatureType>
+
+<?xml version="1.0" encoding="UTF-8"?> 
+<wfs:GetFeature
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd" 
+	xmlns:wfs="http://www.opengis.net/wfs/2.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"		
+	xmlns:fes="http://www.opengis.net/fes/2.0" 
+	xmlns:gsmlb="http://xmlns.geosciml.org/GeoSciML-Basic/4.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	service="WFS" 
+	version="2.0.0"
+	count="100"
+> 
+	<wfs:Query typeNames="gsmlb:MappedFeature" srsName="urn:ogc:def:crs:EPSG::4258"> 
+		<fes:Filter>
+			<fes:BBOX>
+				<fes:ValueReference>gsmlb:shape</fes:ValueReference>
+				<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4258">
+					<gml:lowerCorner>63.46 12.11</gml:lowerCorner>
+					<gml:upperCorner>64.10 14.12</gml:upperCorner>
+				</gml:Envelope>
+			</fes:BBOX>	
+		</fes:Filter> 
+	</wfs:Query>
+</wfs:GetFeature>
+
+<wfs:GetFeature
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd" 
+	xmlns:wfs="http://www.opengis.net/wfs/2.0"
+	xmlns:fes="http://www.opengis.net/fes/2.0" 
+	xmlns:gsmlb="http://xmlns.geosciml.org/GeoSciML-Basic/4.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	service="WFS" 
+	version="2.0.0"
+	count="10"
+> 
+	<wfs:Query typeNames="gsmlb:GeologicUnit" srsName="urn:ogc:def:crs:EPSG::4258"> 
+	</wfs:Query>
+</wfs:GetFeature>
+
+<?xml version="1.0" encoding="UTF-8"?> 
+<wfs:GetFeature
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.opengis.net/wfs/2.0 http://schemas.opengis.net/wfs/2.0/wfs.xsd" 
+	xmlns:wfs="http://www.opengis.net/wfs/2.0"
+	xmlns:gml="http://www.opengis.net/gml/3.2"	
+	xmlns:fes="http://www.opengis.net/fes/2.0" 
+	xmlns:gsmlb="http://xmlns.geosciml.org/GeoSciML-Basic/4.0" 
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	service="WFS" 
+	version="2.0.0"
+	count="100"
+> 
+	<wfs:Query typeNames="gsmlb:MappedFeature" srsName="urn:ogc:def:crs:EPSG::4258"> 
+		<fes:Filter>
+			<fes:And>
+				<fes:BBOX>
+					<fes:ValueReference>gsmlb:shape</fes:ValueReference>
+					<gml:Envelope srsName="urn:ogc:def:crs:EPSG::4258">
+						<gml:lowerCorner>63.46 12.11</gml:lowerCorner>
+						<gml:upperCorner>64.10 14.12</gml:upperCorner>
+					</gml:Envelope>
+				</fes:BBOX>			
+				<fes:PropertyIsEqualTo>
+					<fes:ValueReference>
+						gsmlb:specification/gsmlb:GeologicUnit/gsmlb:composition/gsmlb:CompositionPart/gsmlb:material/gsmlb:RockMaterial/gsmlb:lithology/@xlink:href
+					</fes:ValueReference>
+					<fes:Literal>http://inspire.ec.europa.eu/codelist/LithologyValue/limestone</fes:Literal>
+				</fes:PropertyIsEqualTo>
+			</fes:And>			
+		</fes:Filter> 
+	</wfs:Query>
+</wfs:GetFeature>

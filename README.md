@@ -1,5 +1,5 @@
 # Veileder og webklient for WFS
-Et Norge digitalt prosjekt som utarbeider en teknisk [WFS-veileder](https://register.geonorge.no/data/documents/Veiledere_WFS-veileder_v1_veileder-for-web-feature-service-0-54_.pdf) med eksempler, samt fremme bruk av WFS gjennom en gjenbrukbar webklient
+Et Norge digitalt prosjekt som utarbeider en teknisk [WFS-veileder](https://register.geonorge.no/nasjonale-standarder-og-veiledere/veiledere/wfs-veileder/f36078e5-fac8-4959-8bf8-20bb73b265b8) med eksempler, samt fremme bruk av WFS gjennom en gjenbrukbar webklient
 
 * Lage retningslinjer om hvordan komme i gang med WFS for Norge digitalt partnere.
 * Adressere krav for bruk av WFS.
